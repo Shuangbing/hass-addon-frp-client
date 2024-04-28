@@ -22,7 +22,7 @@ options:
   serverAddr: "example.com"
   serverPort: 7000
   authToken: "123456789"
-  localIp: "127.0.0.1"
+  localIP: "127.0.0.1"
   localPort: 8123
   remotePort: 8123
 
@@ -31,6 +31,6 @@ schema:
   serverAddr: str
   serverPort: int
   authToken: str
-  localIp: str
+  localIP: str
   localPort: int
   remotePort: int
