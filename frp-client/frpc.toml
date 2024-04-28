@@ -8,8 +8,9 @@ log.to = "/share/frpc.log"
 log.level = "trace"
 log.maxDays = 3
 
-[ssh]
+[[proxies]]
+name = "hass-addon"
 type = "tcp"
-local_ip = "127.0.0.1"
-local_port = 8123
-remote_port = 8123
+localIP = "127.0.0.1"
+localPort = 8123
+remotePort = 8123

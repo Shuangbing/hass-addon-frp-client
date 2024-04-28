@@ -13,8 +13,9 @@ cp $DEFAULT_CONFIG_PATH $CONFIG_PATH
 sed -i "s/serverAddr = \"your_server_addr\"/serverAddr = \"$(bashio::config 'serverAddr')\"/" $CONFIG_PATH
 sed -i "s/serverPort = 7000/serverPort = $(bashio::config 'serverPort')/" $CONFIG_PATH
 sed -i "s/auth.token = \"123456789\"/auth.token = \"$(bashio::config 'authToken')\"/" $CONFIG_PATH
-sed -i "s/local_port = 8123/local_port = $(bashio::config 'localPort')/" $CONFIG_PATH
-sed -i "s/remote_port = 8123/remote_port = $(bashio::config 'remotePort')/" $CONFIG_PATH
+sed -i "s/localIP = \"127.0.0.1\"/localIP = \"$(bashio::config 'localIP')\"/" $CONFIG_PATH
+sed -i "s/localPort = 8123/localPort = $(bashio::config 'localPort')/" $CONFIG_PATH
+sed -i "s/remotePort = 8123/remotePort = $(bashio::config 'remotePort')/" $CONFIG_PATH
 
 
 bashio::log.info "Starting frp client"
